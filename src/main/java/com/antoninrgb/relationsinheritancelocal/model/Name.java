@@ -2,10 +2,9 @@ package com.antoninrgb.relationsinheritancelocal.model;
 
 import jakarta.persistence.*;
 
-@Entity
+@Embeddable
 public class Name {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY) private int id;
     private String salutation;
     private String firstName;
     private String middleName;
@@ -18,11 +17,8 @@ public class Name {
         this.lastName = lastName;
     }
 
-    public Name() {};
+    public Name() {}
 
-    public int getId() {
-        return id;
-    }
 
     public String getSalutation() {
         return salutation;

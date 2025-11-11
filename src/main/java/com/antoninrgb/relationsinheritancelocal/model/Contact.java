@@ -8,7 +8,7 @@ public class Contact {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY) private int id;
     private String company;
     private String title;
-    @OneToOne private Name name;
+    @Embedded private Name name;
 
     public Contact(String company, String title, Name name) {
         this.company = company;
